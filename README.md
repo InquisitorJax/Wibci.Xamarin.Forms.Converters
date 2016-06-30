@@ -15,7 +15,7 @@ converts a hex string to Xamarin Forms Color
 ###NullValueToBoolean
 converts null to true ; false if parameter passed
 
-###EmptyStringToFillTextConverter
+###EmptyStringToFillText
 Display a string like "<Not Available>" if the bound value is empty.
 Specify default value in parameter
 
