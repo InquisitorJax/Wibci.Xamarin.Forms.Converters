@@ -1,6 +1,8 @@
 # Wibci.Xamarin.Forms.Converters
 Common Value Converters for use with Xamarin Forms apps
 
+TODO: Update sample app with TrimString / ImageSource / Hex converter examples
+
 ###BooleanToInvertedBoolean
 inverts a boolean value
 Sample Xaml:
@@ -14,6 +16,10 @@ converts a hex string to Xamarin Forms Color
 
 ###NullValueToBoolean
 converts null to true ; false if parameter passed
+
+###EmptyStringToFillText
+Display a string like "<Not Available>" if the bound value is empty.
+Specify default value in parameter
 
 ###TrimString
 Converts long string to trimmed string appended by '...'
