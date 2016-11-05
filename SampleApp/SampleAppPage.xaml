@@ -1,4 +1,36 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:SampleApp" x:Class="SampleApp.SampleAppPage">
-	<Label Text="Welcome to Xamarin Forms!" VerticalOptions="Center" HorizontalOptions="Center" />
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="SampleApp.SampleAppPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:Wibci.Xamarin.Forms.Converters;assembly=Wibci.Xamarin.Forms.Converters"
+             xmlns:local="clr-namespace:SampleApp">
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <converters:ByteArrayToImageSourceConverter x:Key="bisc" />
+      <converters:EmptyStringToFillTextConverter x:Key="esft" />
+      <converters:NullValueToBooleanConverter x:Key="nvb" />
+      <converters:BooleanToInvertedBooleanConverter x:Key="bib" />
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  <ContentPage.Content>
+    <StackLayout Padding="3,12,3,0">
+      <Label HorizontalOptions="Center"
+             Text="Welcome to Xamarin Forms Converters!"
+             VerticalOptions="Center" />
+      <Label FontSize="Micro" Text="ByteArrayToImageSource" />
+      <Image Source="{Binding Image, Converter={StaticResource bisc}, ConverterParameter=icon}" />
+      <Label FontSize="Micro" Text="EmptyStringToFillText" />
+      <Label Text="{Binding Text, Converter={StaticResource esft}, ConverterParameter='No text supplied'}" />
+      <Entry Text="{Binding Text}" />
+      <StackLayout Orientation="Horizontal">
+        <Label Text="Boolean Converters:" />
+        <Label Text="Has Text: " />
+        <Label x:Name="noLabel"
+               IsVisible="{Binding Text,
+                                           Converter={StaticResource nvb}}"
+               Text="NO!" />
+        <Label IsVisible="{Binding IsVisible, Source={x:Reference noLabel}, Converter={StaticResource bib}}" Text="YES!" />
+      </StackLayout>
+    </StackLayout>
+  </ContentPage.Content>
 </ContentPage>

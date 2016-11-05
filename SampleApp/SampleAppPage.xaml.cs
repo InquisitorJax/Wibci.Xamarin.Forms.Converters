@@ -2,12 +2,12 @@
 
 namespace SampleApp
 {
-	public partial class SampleAppPage : ContentPage
-	{
-		public SampleAppPage()
-		{
-			InitializeComponent();
-		}
-	}
+    public partial class SampleAppPage : ContentPage
+    {
+        public SampleAppPage()
+        {
+            InitializeComponent();
+            BindingContext = new SampleModel();
+        }
+    }
 }
-
