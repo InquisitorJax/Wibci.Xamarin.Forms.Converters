@@ -1,6 +1,8 @@
 # Wibci.Xamarin.Forms.Converters
 Common Value Converters for use with Xamarin Forms apps
 
+TODO: Update sample app with TrimString / ImageSource / Hex converter examples
+
 ###BooleanToInvertedBoolean
 inverts a boolean value
 Sample Xaml:
