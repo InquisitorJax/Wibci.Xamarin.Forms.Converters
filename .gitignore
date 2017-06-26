@@ -243,3 +243,5 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/SampleApp.Droid/SampleApp.Droid.csproj.bak
+/SampleApp.Droid/SampleApp.Droid.csproj.bak
