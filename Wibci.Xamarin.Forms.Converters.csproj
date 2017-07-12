@@ -37,6 +37,7 @@
   <ItemGroup>
     <Compile Include="BooleanToInvertedBooleanConverter.cs" />
     <Compile Include="EmptyStringToFillTextConverter.cs" />
+    <Compile Include="PrefixedStringConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ByteArrayToImageSourceConverter.cs" />
     <Compile Include="NullValueToBooleanConverter.cs" />
