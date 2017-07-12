@@ -1,6 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleApp.App">
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleApp.App"
+             xmlns:converters="clr-namespace:Wibci.Xamarin.Forms.Converters;assembly=Wibci.Xamarin.Forms.Converters">
 	<Application.Resources>
 		<!-- Application resource dictionary -->
-	</Application.Resources>
+	    <ResourceDictionary>
+	        <converters:ByteArrayToImageSourceConverter x:Key="bisc" />
+	        <converters:EmptyStringToFillTextConverter x:Key="esft" />
+	        <converters:NullValueToBooleanConverter x:Key="nvb" />
+	        <converters:BooleanToInvertedBooleanConverter x:Key="bib" />
+	    </ResourceDictionary>
+
+    </Application.Resources>
 </Application>
