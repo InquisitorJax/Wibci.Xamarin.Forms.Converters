@@ -1,6 +1,5 @@
 ﻿using Foundation;
 using UIKit;
-using Wibci.Xamarin.Forms.Converters;
 
 namespace SampleApp.iOS
 {
@@ -16,8 +15,6 @@ namespace SampleApp.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            //CrossValueConverters.Init();
-
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 

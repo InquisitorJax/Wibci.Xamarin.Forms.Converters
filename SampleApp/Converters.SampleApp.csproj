@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <FileVersion>2.0.0.0</FileVersion>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>2.0.0</Version>
+    <Authors>Malcolm Jack</Authors>
+    <Company>Wibci Labs</Company>
+    <Product>Value Converters for Xamarin Forms</Product>
+    <Description>Some common value converters for xamarin forms.
+BooleanToInvertedBoolean ; ByteArrayToImageSourceConverter ; EmptyStringToFillTextConverter ; HexStringToColorConverter ; NullValueToBooleanConverter ; TrimStringConverter</Description>
+    <PackageProjectUrl>https://github.com/InquisitorJax/Wibci.Xamarin.Forms.Converters</PackageProjectUrl>
+    <PackageIconUrl>http://wibcisoft.com/Images/Wibcisoft.png</PackageIconUrl>
+    <RepositoryUrl>https://github.com/InquisitorJax/Wibci.LogicCommand</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Xamarin Forms, Converters</PackageTags>
+    <PackageReleaseNotes>.NET Standard</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.Portable.Compatibility" Version="1.0.1" />
+    <PackageReference Include="Prism.Core" Version="6.3.0" />
+    <PackageReference Include="Xamarin.Forms" Version="2.4.0.280" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Wibci.Xamarin.Forms.Converters\Wibci.Xamarin.Forms.Converters.csproj" />
+  </ItemGroup>
+
+</Project>
